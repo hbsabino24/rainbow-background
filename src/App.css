@@ -1,0 +1,25 @@
+/* RAINBOW BG ANIMATION */
+@keyframes rainbowBG { 
+  0%   { background: red; }
+  17%  { background: orange; }
+  34%  { background: yellow; }
+  50%  { background: green; }
+  65%  { background: blue; }
+  82%  { background: purple; }
+  100% { background: violet; }
+}
+
+.rainbow-in-action {
+  animation: rainbowBG 5s infinite !important;
+  transition: all 0.5s ease;
+
+  h1 {
+    position: relative;
+    top: 2rem;
+    margin-bottom: 5rem;
+    font-family: cursive;
+    color: white;
+    mix-blend-mode: difference;
+    transform: scale(1.5);
+  }
+}
