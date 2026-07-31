@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import EmailForm from './Forms/EmailForm.jsx';
+import RegistrationForm from './Forms/RegistrationForm.jsx';
+import ExchancedForm from './Forms/EnhancedForm.jsx';
 
 function App() {
   const [helloMessage, setMessage] = useState("World");
@@ -49,6 +52,14 @@ function App() {
           />
         </div>
       )}
+
+      {!showPeanutImage && (
+        <div className="forms-row">
+          <EmailForm />
+          <RegistrationForm />
+          <ExchancedForm />
+        </div>
+  )}
     </div>
   );
 }

@@ -23,3 +23,11 @@
     transform: scale(1.5);
   }
 }
+
+.forms-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin: 2rem;
+}
