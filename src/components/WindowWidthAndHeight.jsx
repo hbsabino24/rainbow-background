@@ -24,11 +24,11 @@ function WindowWidthAndHeight() {
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
-        console.log("Event listener added");
+        console.log("Window Resize - Event listener added");
 
         return () => { // if no dependencies, this will run when component unmounts
             window.removeEventListener("resize", handleResize);
-            console.log("Event listener removed");
+            console.log("Window Resize - Event listener removed");
         };
         
     }, []);
@@ -45,7 +45,6 @@ function WindowWidthAndHeight() {
     return (
         <div>
             <hr />
-            <h1>Dynamic Window Width and Height Adjustment</h1>
             <h2>Try resizing the window and see <br />the changes of width and height, also the window title</h2>
             <p>Window width: {width}</p>
             <p>Window height: {height}</p>

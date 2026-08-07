@@ -5,6 +5,7 @@ import RegistrationForm from './components/Forms/RegistrationForm.jsx';
 import ExchancedForm from './components/Forms/EnhancedForm.jsx';
 import WindowWidthAndHeight from './components/WindowWidthAndHeight.jsx';
 import Counter from './components/Counter.jsx';
+import DigitalClock from './components/DigitalClock.jsx';
 
 function App() {
   const [helloMessage, setMessage] = useState("World");
@@ -63,7 +64,8 @@ function App() {
             <ExchancedForm />
           </div>
           <WindowWidthAndHeight />  
-          <Counter />      
+          <Counter /> 
+          <DigitalClock />     
         </>
   )}
     </div>
