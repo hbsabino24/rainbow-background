@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import EmailForm from './Forms/EmailForm.jsx';
-import RegistrationForm from './Forms/RegistrationForm.jsx';
-import ExchancedForm from './Forms/EnhancedForm.jsx';
+import EmailForm from './components/Forms/EmailForm.jsx';
+import RegistrationForm from './components/Forms/RegistrationForm.jsx';
+import ExchancedForm from './components/Forms/EnhancedForm.jsx';
+import WindowWidthAndHeight from './components/WindowWidthAndHeight.jsx';
+import Counter from './components/Counter.jsx';
 
 function App() {
   const [helloMessage, setMessage] = useState("World");
@@ -54,11 +56,15 @@ function App() {
       )}
 
       {!showPeanutImage && (
-        <div className="forms-row">
-          <EmailForm />
-          <RegistrationForm />
-          <ExchancedForm />
-        </div>
+        <>
+          <div className="forms-row">
+            <EmailForm />
+            <RegistrationForm />
+            <ExchancedForm />
+          </div>
+          <WindowWidthAndHeight />  
+          <Counter />      
+        </>
   )}
     </div>
   );
