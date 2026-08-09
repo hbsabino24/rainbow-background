@@ -31,3 +31,85 @@
   gap: 2rem;
   margin: 2rem;
 }
+
+.nav {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  /* backdrop-filter: blur(10px);   */
+}
+
+.nav__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 2rem;
+}
+
+.nav__listitem {
+  list-style: none;
+  position: relative;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav__listitem:hover .nav__listitemdrop,
+.nav__listitem:focus-within .nav__listitemdrop {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav__listitemdrop {
+  position: absolute;
+  top:4rem;
+  left:-1rem;
+  text-align: center;
+  box-shadow: 0 0 10px gray;
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* z-index: 1; */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__listitemdrop li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__listitemdrop li:hover,
+.nav__listitemdrop li:focus {
+  transform: scale(1.1);
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-family: monospace;
+  color: blue;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px black;
+  
+  transition: all 1s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: darkblue;
+  cursor: pointer;
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px whitesmoke;
+}

@@ -33,7 +33,6 @@ function Counter() {
 
     return (
         <>
-            <hr />
             <p style={{ color: color }}>Count: {count}</p>
             <button onClick={addCount}>Add</button>
             <button onClick={subtractCount}>Subtract</button>

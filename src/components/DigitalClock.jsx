@@ -31,7 +31,6 @@ function DigitalClock() {
 
     return (
         <>
-            <hr />
             <div className={styles.clock_container}>
                 <div className={styles.clock}>
                     <span>{formatTime()}</span>
