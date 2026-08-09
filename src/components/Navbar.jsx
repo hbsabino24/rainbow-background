@@ -16,8 +16,12 @@ const Navbar = () => {
             <li><Link to="/counter">Counter</Link></li>
             <li><Link to="/window">Window Resize</Link></li>
             <li><Link to="/forms">Forms</Link></li>
-            <li><Link to="/registration-form">Registration Form</Link></li>
-            <li><Link to="/exchanced-form">Exchanced Form</Link></li>
+          </ul>
+        </li>
+        <li className="nav__listitem"><a href="#">Basics of React</a>
+          <ul className="nav__listitemdrop">
+            <li><Link to="/props">Student Props</Link></li>
+            <li><Link to="/reusable">Reusable Student</Link></li>
           </ul>
         </li>
       </ul>

@@ -45,8 +45,8 @@ function WindowWidthAndHeight() {
     return (
         <div>
             <h2>Try resizing the window and see <br />the changes of width and height, also the window title</h2>
-            <p>Window width: {width}</p>
-            <p>Window height: {height}</p>
+            <p>Window width: <span className='current-value'>{width}</span></p>
+            <p>Window height: <span className='current-value'>{height}</span></p>
         </div>
     );
 }
