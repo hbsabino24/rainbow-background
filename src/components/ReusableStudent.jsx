@@ -7,6 +7,7 @@ function ReusableStudent() {
             <Student name="Jane Doe" age={21} isStudent={false} />
             <Student name="Jack Doe" age={22} isStudent={true} />
             <Student name="Jill Doe" age={23} isStudent={false} />
+            <Student /> {/* using default props */}
         </>
     )
 }

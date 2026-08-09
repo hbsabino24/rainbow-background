@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import StudentProps from './components/StudentProps';
 import ReusableStudent from './components/ReusableStudent';
 import FormGroup from './components/Forms/FormGroup';
+import UserGreeting from './components/UserGreeting';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/forms" element={<FormGroup /> } /> 
         <Route path="/props" element={<StudentProps name="John Doe" age={20} isStudent={true} />} />
         <Route path="/reusable" element={<ReusableStudent />} />
+        <Route path="/usergreeting" element={<UserGreeting username="John Doe" isLoggedIn={true} />} />
       </Routes>    
     </>
   );

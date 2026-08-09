@@ -34,9 +34,11 @@ function Counter() {
     return (
         <>
             <p style={{ color: color }}>Count: {count}</p>
-            <button onClick={addCount}>Add</button>
-            <button onClick={subtractCount}>Subtract</button>
-            <button onClick={changeColor}>Change Color</button>
+            <div className="counter-btns">
+                <button onClick={addCount}>Add</button>
+                <button onClick={subtractCount}>Subtract</button>
+                <button onClick={changeColor}>Change Color</button>
+            </div>
         </>
     );
 }

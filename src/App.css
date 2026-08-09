@@ -9,6 +9,43 @@
   100% { background: violet; }
 }
 
+/* RAINBOW BUTTON ANIMATION */
+@keyframes rainbowBTN {
+  0%   { background-color: blue; }
+  16%  { background-color: green; }
+  34%  { background-color: greenyellow; }
+  50%  { background-color: purple; }
+  65%  { background-color: red; }
+  82%  { background-color: orange; }
+  100% { background-color: violet; }
+}
+
+/* RAINBOW SHADOW ANIMATION */
+@keyframes rainbowShadow {
+  0%   { box-shadow: 9px 9px 25px blue; }
+  16%  { box-shadow: 9px 9px 15px green; }
+  34%  { box-shadow: 9px 9px 25px greenyellow; }
+  50%  { box-shadow: 9px 9px 15px purple; }
+  65%  { box-shadow: 9px 9px 25px red; }
+  82%  { box-shadow: 9px 9px 15px orange; }
+  100% { box-shadow: 9px 9px 25px violet; }
+}
+
+/* HELLO CRAP NUT ANIMATION */
+@keyframes crapNutHeader {
+  0%   { transform: rotate(0deg) scale(1.5); }
+  10%  { transform: rotate(10deg); }
+  20%  { transform: rotate(-10deg); }
+  30%  { transform: rotate(10deg); }
+  40%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg) scale(1.5); }
+  60%  { transform: rotate(-10deg); }
+  70%  { transform: rotate(10deg); }
+  80%  { transform: rotate(-10deg); }
+  90%  { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg) scale(1.5); }
+}
+
 .rainbow-in-action {
   animation: rainbowBG 5s infinite !important;
   transition: all 0.5s ease;
@@ -16,11 +53,23 @@
   h1 {
     position: relative;
     top: 2rem;
+    font-size: 5rem;
     margin-bottom: 5rem;
     font-family: cursive;
     color: white;
     mix-blend-mode: difference;
+    animation: crapNutHeader 5s infinite;
     transform: scale(1.5);
+  }
+
+  button {
+    animation: rainbowBTN 5s infinite !important;
+    transition: all 0.5s ease;
+  }
+
+  button:hover {
+    animation: rainbowShadow 5s infinite !important;
+    transform: scale(2);
   }
 }
 
@@ -33,16 +82,26 @@
 }
 
 button {
+  font-size: 1.5rem;
+  font-family: monospace;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  border: none;
+  border: 1px solid black;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 button:hover {
-  border: 2px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  background-color: darkblue;
+  color: white;
+}
+
+.counter-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
 }
 
 h1, h2, p {
@@ -57,6 +116,16 @@ h1, h2, p {
 .current-value {
   font-size: 2.1rem;
   color: lawngreen;
+}
+
+.welcome-message {
+  color: lawngreen;
+  text-shadow: 3px 3px 5px black;
+}
+
+.login-message {
+  color: red;
+  text-shadow: 3px 3px 5px black;
 }
 
 .nav {
