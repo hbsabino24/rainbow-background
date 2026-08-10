@@ -23,7 +23,18 @@ const Navbar = () => {
             <li><Link to="/props">Student Props</Link></li>
             <li><Link to="/reusable">Reusable Student</Link></li>
             <li><Link to="/usergreeting">Condition Rendering</Link></li>
-            <li><Link to="/list">Fruit List</Link></li>
+            <li className="nav__sublistitem"><Link to="/list/fruits">List</Link>
+              <ul className="nav__listitemdrop nav__submenu">
+                <li><Link to="/list/fruits">Fruits</Link></li>
+                <li><Link to="/list/veggies">Vegetables</Link></li>
+              </ul>
+            </li>
+            <li className="nav__sublistitem"><Link to="/button">Button</Link>
+              <ul className="nav__listitemdrop nav__submenu">
+                <li><Link to="/button">Button onClick Event</Link></li>
+                <li><Link to="/button/profile">Profile Picture</Link></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>

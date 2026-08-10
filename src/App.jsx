@@ -10,6 +10,8 @@ import ReusableStudent from './components/ReusableStudent';
 import FormGroup from './components/Forms/FormGroup';
 import UserGreeting from './components/UserGreeting';
 import List from './components/List';
+import Button from './components/Button';
+import ProfilePicture from './components/ProfilePicture';
 
 function App() {
 
@@ -20,6 +22,15 @@ function App() {
         {id: 4, name: "coconut", calories: 200},
         {id: 5, name: "orange", calories: 150},
         {id: 6, name: "pineapple", calories: 300},
+    ]
+    
+    const veggiesList = [
+        {id: 7, name: "potatoes", calories: 110},
+        {id: 8, name: "celery", calories: 15},
+        {id: 9, name: "carrots", calories: 25},
+        {id: 10, name: "corn", calories: 67},
+        {id: 11, name: "broccoli", calories: 63},
+        {id: 12, name: "spinach", calories: 50},
     ]
 
   return (
@@ -35,7 +46,10 @@ function App() {
         <Route path="/props" element={<StudentProps name="John Doe" age={20} isStudent={true} />} />
         <Route path="/reusable" element={<ReusableStudent />} />
         <Route path="/usergreeting" element={<UserGreeting username="John Doe" isLoggedIn={false} />} />
-        <Route path="/list" element={<List items={fruitsList} category="Fruits" />} />
+        <Route path="/list/fruits" element={fruitsList.length > 0 && <List items={fruitsList} category="Fruits" />} />
+        <Route path="/list/veggies" element={veggiesList.length > 0 && <List items={veggiesList} category="Veggies" /> } />
+        <Route path="/button" element={<Button />} />
+        <Route path="/button/profile" element={<ProfilePicture />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>
