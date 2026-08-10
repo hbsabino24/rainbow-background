@@ -44,6 +44,8 @@ export default function EnhancedForm() {
   return (
     <form style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
       <h2>Enhanced Form</h2>
+
+      <label htmlFor="username">Username: </label>
       <input
         name="username"
         placeholder="Username"
@@ -51,6 +53,7 @@ export default function EnhancedForm() {
         onChange={handleChange}
       />
       
+      <label htmlFor="email">Email Address: </label>
       <input
         name="email"
         type="email"
@@ -59,6 +62,7 @@ export default function EnhancedForm() {
         onChange={handleChange}
       />
       
+      <label htmlFor="phone">Phone Number: </label>
       <input
         name="phone"
         type="tel"

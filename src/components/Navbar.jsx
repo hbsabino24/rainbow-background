@@ -23,6 +23,7 @@ const Navbar = () => {
             <li><Link to="/props">Student Props</Link></li>
             <li><Link to="/reusable">Reusable Student</Link></li>
             <li><Link to="/usergreeting">Condition Rendering</Link></li>
+            <li><Link to="/list">Fruit List</Link></li>
           </ul>
         </li>
       </ul>

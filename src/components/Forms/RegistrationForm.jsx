@@ -31,21 +31,25 @@ export default function RegistrationForm() {
   return (
     <form style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
       <h2>Registration Form</h2>
+      
+      <label htmlFor="username-input">Username: </label>
       <input
-        name="username"
+        name="username-input"
         placeholder="Username (min 3 chars)"
         value={formData.username}
         onChange={handleChange}
       />
       
+      <label htmlFor="email-input">Email Address: </label>
       <input
-        name="email"
+        name="email-input"
         type="email"
         placeholder="Email Address"
         value={formData.email}
         onChange={handleChange}
       />
       
+      <label htmlFor="password">Password: </label>
       <input
         name="password"
         type="password"
