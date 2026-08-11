@@ -49,8 +49,10 @@
 :root {
   --primary-color: aliceblue;
   --secondary-color: darkblue;
+  --standard-border: 1px solid black;
   --standard-border-radius: 5px;
   --standard-box-shadow: 5px 5px 10px black;
+  --standard-text-shadow: 3px 3px 5px black;
   --standard-transition: all 0.5s ease-in-out;
   --standard-font: monospace;
   --standard-font-size: 1.5rem;
@@ -72,6 +74,12 @@
     transform: scale(1.5);
   }
 
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   button {
     animation: rainbowBTN 5s infinite !important;
     transition: all 0.5s ease;
@@ -86,7 +94,7 @@
 .forms-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 2rem;
   margin: 2rem;
 }
@@ -123,6 +131,7 @@ button:active {
   display: none;
 }
 
+.lists-group,
 .btn-group,
 .counter-btns {
   display: flex;
@@ -136,7 +145,7 @@ button:active {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  border: 1px solid black;
+  border: var(--standard-border);
   cursor: pointer;
   display: block;
   margin: 1rem auto;
@@ -163,8 +172,8 @@ button:active {
   width: 30rem;
   margin: 0.6rem;
   padding: 0.7rem;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--standard-box-shadow);
 
   ul {
     list-style: none;
@@ -174,17 +183,10 @@ button:active {
   }
 }
 
-.lists-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-}
-
 .list-category {
   font-size: 2.2rem;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   color:darkmagenta;
   text-shadow: 2px 2px 4px whitesmoke;
   background-color: cornflowerblue;
@@ -194,51 +196,55 @@ li, h1, h2, p {
   font-size: 2rem;
   text-align: center;
   margin: 1rem 0;
-  /* font-family: monospace; */
   font-weight: bold;
-  text-shadow: 3px 3px 5px black;
 }
 
 label {
   font-size: var(--standard-font-size);
-  font-family: monospace;
   color: cornsilk;
-  text-shadow: 3px 3px 15px black;
 }
 
-input {
-  font-size: 1rem;
-  font-family: monospace;
+li, h1, h2, p, label {
+  transition: var(--standard-transition);
+  text-shadow: var(--standard-text-shadow);
+  font-family: var(--standard-font);
+}
+
+input, textarea, select {
+  font-size: var(--standard-font-size);
+  font-family: var(--standard-font);
   padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: 1px solid black;
+  border-radius: var(--standard-border-radius);
+  border: var(--standard-border);
   cursor: pointer;
 }
 
 hr {
   margin: 1rem 0;
-  border: 1px solid black;
+  border: var(--primary-color) solid 2px;
 }
 
 .current-value {
   font-size: 2.1rem;
   color: lawngreen;
-  transition: all 0.5s ease-in-out;
+  transition: var(--standard-transition);
 
   &:hover {
     color: blue;
-    cursor: pointer;
     text-shadow: 4px 4px 10px darkslategray;
   }
 }
 
 .welcome-message {
   color: lawngreen;
-  text-shadow: 3px 3px 5px black;
 }
 
 .login-message {
   color: red;
+}
+
+.welcome-message,
+.login-message {
   text-shadow: 3px 3px 5px black;
 }
 
@@ -285,12 +291,12 @@ hr {
 
 .nav__listitemdrop {
   position: absolute;
-  top:4rem;
-  left:-1rem;
+  top: 4rem;
+  left: -1rem;
   text-align: center;
   box-shadow: 0 0 10px gray;
   background-color: aliceblue;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -305,7 +311,7 @@ hr {
   list-style: none;
   padding: 0.5rem 1rem;
   margin: 0;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   transition: all 0.3s ease-in-out;
 }
 
@@ -328,9 +334,9 @@ hr {
 
 a {
   text-decoration: none;
-  font-family: monospace;
+  font-family: var(--standard-font);
   color: blue;
-  font-size: 1.5rem;
+  font-size: var(--standard-font-size);
   text-shadow: 1px 1px 2px black;
   
   transition: all 1s ease-in-out;

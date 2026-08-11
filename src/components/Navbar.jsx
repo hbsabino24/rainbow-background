@@ -22,6 +22,7 @@ const Navbar = () => {
                 <li><Link to="/form/enchanced">Enchanced Form</Link></li>
               </ul>            
             </li>
+            <li><Link to="/onchange/color">Color Picker</Link></li>
           </ul>
         </li>
         <li className="nav__listitem"><a href="#">Basics of React</a>
@@ -45,6 +46,15 @@ const Navbar = () => {
               <ul className="nav__listitemdrop nav__submenu">
                 <li><Link to="/usestate/counter">Counter</Link></li>
                 <li><Link to="/usestate/name">Name State</Link></li>
+                <li><Link to="/onchange/color">Color Picker</Link></li>
+                <li><Link to="/usestate/updater">Updater</Link></li>
+              </ul>
+            </li>
+            <li className="nav__sublistitem"><Link to="/onchange">onChange</Link>
+              <ul className="nav__listitemdrop nav__submenu">
+                <li><Link to="/onchange/value">Value onChange</Link></li>
+                <li><Link to="/onchange/color">Color onChange</Link></li>
+                <li><Link to="/forms">Form onChange</Link></li>
               </ul>
             </li>
           </ul>

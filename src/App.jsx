@@ -17,6 +17,9 @@ import List from './components/List';
 import Button from './components/Button';
 import ProfilePicture from './components/ProfilePicture';
 import NameState from './components/NameState';
+import ValueOnChange from './components/ValueOnChange';
+import ColorPicker from './components/ColorPicker';
+import StateUpdater from './components/StateUpdater';
 
 function App() {
 
@@ -59,6 +62,9 @@ function App() {
         <Route path="/button" element={<Button />} />
         <Route path="/button/profile" element={<ProfilePicture />} />
         <Route path="/usestate/name" element={<NameState />} />
+        <Route path="/onchange/value" element={<ValueOnChange />} />
+        <Route path="/onchange/color" element={<ColorPicker />} />
+        <Route path="/usestate/updater" element={<StateUpdater />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>
