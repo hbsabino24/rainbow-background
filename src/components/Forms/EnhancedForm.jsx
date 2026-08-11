@@ -37,44 +37,47 @@ export default function EnhancedForm() {
     const isUsernameValid = formData.username.trim().length >= 3;
     const isEmailValid = emailRegex.test(formData.email);
     const isPhoneValid = phoneRegex.test(formData.phone);
+    // console.log("Submit button is " + (isUsernameValid && isEmailValid && isPhoneValid ? "enabled" : "disabled" ));
 
     return isUsernameValid && isEmailValid && isPhoneValid;
   };
 
   return (
-    <form style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
-      <h2>Enhanced Form</h2>
+    <div className='forms-row'>
+      <form style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
+        <h2>Enhanced Form</h2>
 
-      <label htmlFor="username">Username: </label>
-      <input
-        name="username"
-        placeholder="Username"
-        value={formData.username}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="email">Email Address: </label>
-      <input
-        name="email"
-        type="email"
-        placeholder="Email Address"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="phone">Phone Number: </label>
-      <input
-        name="phone"
-        type="tel"
-        placeholder="Phone (123) 456-7890"
-        value={formData.phone}
-        maxLength={14} // Prevents extra characters past (XXX) XXX-XXXX
-        onChange={handleChange}
-      />
+        <label htmlFor="username">Username: </label>
+        <input
+          name="username"
+          placeholder="Username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        
+        <label htmlFor="email">Email Address: </label>
+        <input
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        
+        <label htmlFor="phone">Phone Number: </label>
+        <input
+          name="phone"
+          type="tel"
+          placeholder="Phone (123) 456-7890"
+          value={formData.phone}
+          maxLength={14} // Prevents extra characters past (XXX) XXX-XXXX
+          onChange={handleChange}
+        />
 
-      <button type="submit" disabled={!validateForm()}>
-        Submit
-      </button>
-    </form>
+        <button type="submit" disabled={!validateForm()}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }

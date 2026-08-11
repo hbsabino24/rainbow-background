@@ -29,38 +29,40 @@ export default function RegistrationForm() {
   const isButtonDisabled = !validateForm();
 
   return (
-    <form style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
-      <h2>Registration Form</h2>
-      
-      <label htmlFor="username-input">Username: </label>
-      <input
-        name="username-input"
-        placeholder="Username (min 3 chars)"
-        value={formData.username}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="email-input">Email Address: </label>
-      <input
-        name="email-input"
-        type="email"
-        placeholder="Email Address"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="password">Password: </label>
-      <input
-        name="password"
-        type="password"
-        placeholder="Password (min 6 chars)"
-        value={formData.password}
-        onChange={handleChange}
-      />
+    <div className="forms-row">
+      <form style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
+        <h2>Registration Form</h2>
+        
+        <label htmlFor="username">Username: </label>
+        <input
+          name="username"
+          placeholder="Username (min 3 chars)"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        
+        <label htmlFor="email">Email Address: </label>
+        <input
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        
+        <label htmlFor="password">Password: </label>
+        <input
+          name="password"
+          type="password"
+          placeholder="Password (min 6 chars)"
+          value={formData.password}
+          onChange={handleChange}
+        />
 
-      <button type="submit" disabled={isButtonDisabled}>
-        Register
-      </button>
-    </form>
+        <button type="submit" disabled={isButtonDisabled}>
+          Register
+        </button>
+      </form>
+    </div>
   );
 }

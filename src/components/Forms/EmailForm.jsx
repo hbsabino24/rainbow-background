@@ -10,21 +10,22 @@ export default function EmailForm() {
   const isInvalidEmail = !emailRegex.test(email);
 
   return (
-    
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
-      <h2>Email Form</h2>
-      <label htmlFor="email-input">Email Address: </label>
-      <input
-        id="email-input"
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-      />
-      
-      <button type="submit" disabled={isInvalidEmail}>
-        Submit
-      </button>
+    <div className="forms-row">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '300px' }}>
+        <h2>Email Form</h2>
+        <label htmlFor="email">Email Address: </label>
+        <input
+          name="email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+        />
+        
+        <button type="submit" disabled={isInvalidEmail}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 }

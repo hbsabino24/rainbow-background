@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-
+// React hook = Special function that allows functional components
+//              to use React features without writing class components (React v16.8)
+//              (useState, useEffect, useContext, useReducer, useCallback, and more...)
 
 function Counter() {
     const [count, setCount] = useState(0);
@@ -17,13 +19,17 @@ function Counter() {
         setColor(c => c === "lightblue" ? "pink" : "lightblue");
     }
 
+    const resetCount = () => {
+        setCount(0);
+    }
+
     useEffect(() => {
-        window.addEventListener("counter", [addCount, subtractCount, changeColor]);
-        console.log("Counter - Event listener added");
+        window.addEventListener("counter", [addCount, subtractCount, changeColor, resetCount]);
+        console.log("Counter - Event listeners added");
 
         return () => { // if no dependencies, this will run when component unmounts
-            window.removeEventListener("counter", [addCount, subtractCount, changeColor]);
-            console.log("Counter - Event listener removed");
+            window.removeEventListener("counter", [addCount, subtractCount, changeColor, resetCount]);
+            console.log("Counter - Event listeners removed");
         };
     }, []);
 
@@ -38,6 +44,7 @@ function Counter() {
                 <button onClick={addCount}>Add</button>
                 <button onClick={subtractCount}>Subtract</button>
                 <button onClick={changeColor}>Change Color</button>
+                <button onClick={resetCount}>Reset</button>
             </div>
         </>
     );

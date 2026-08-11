@@ -103,11 +103,46 @@ button:hover:disabled {
   opacity: 0.5;
 }
 
+button:active {
+  cursor: pointer;
+  transform: scale(0.9);  
+}
+
+#reset {
+  margin: 1rem auto;
+  display: none;
+}
+
+.btn-group,
 .counter-btns {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+  margin-top: 5rem;
+}
+
+.img-btn {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    width: 16rem;
+    height: 16rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    background-color: darkblue;
+  }
+
+  &:active {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 .fruit-list {
@@ -270,6 +305,7 @@ hr {
 
 .nav__submenu {
   top: 0;
+  width: 15rem;
   left: calc(100% + 0.5rem);
 }
 
@@ -291,9 +327,7 @@ a {
 }
 
 a:hover {
-  /* text-decoration: underline; */
   color: darkblue;
   cursor: pointer;
-  /* transform: scale(1.1); */
   text-shadow: 2px 2px 4px whitesmoke;
 }

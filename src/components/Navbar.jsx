@@ -12,10 +12,16 @@ const Navbar = () => {
           <a href="#">React Components</a>
           <ul className='nav__listitemdrop'>
             <li><a href="/hello">Hello</a></li>
-            <li><Link to="/clock">Digital Clock</Link></li>
-            <li><Link to="/counter">Counter</Link></li>
+            <li><Link to="/useeffect/clock">Digital Clock</Link></li>
+            <li><Link to="/usestate/counter">Counter</Link></li>
             <li><Link to="/window">Window Resize</Link></li>
-            <li><Link to="/forms">Forms</Link></li>
+            <li className="nav__sublistitem"><Link to="/forms">Forms</Link>
+              <ul className="nav__listitemdrop nav__submenu">
+                <li><Link to="/form/email">Email Form</Link></li>
+                <li><Link to="/form/registration">Registration</Link></li>
+                <li><Link to="/form/enchanced">Enchanced Form</Link></li>
+              </ul>            
+            </li>
           </ul>
         </li>
         <li className="nav__listitem"><a href="#">Basics of React</a>
@@ -31,8 +37,14 @@ const Navbar = () => {
             </li>
             <li className="nav__sublistitem"><Link to="/button">Button</Link>
               <ul className="nav__listitemdrop nav__submenu">
-                <li><Link to="/button">Button onClick Event</Link></li>
-                <li><Link to="/button/profile">Profile Picture</Link></li>
+                <li><Link to="/button">Button onClick</Link></li>
+                <li><Link to="/button/profile">Profile Image</Link></li>
+              </ul>
+            </li>
+            <li className="nav__sublistitem"><Link to="/usestate">useState</Link>
+              <ul className="nav__listitemdrop nav__submenu">
+                <li><Link to="/usestate/counter">Counter</Link></li>
+                <li><Link to="/usestate/name">Name State</Link></li>
               </ul>
             </li>
           </ul>

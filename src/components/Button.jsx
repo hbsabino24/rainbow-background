@@ -10,9 +10,9 @@ function Button() {
         console.log("Button Clicked");
     }
 
-    const handleClick2 = (name) => {
-        console.log(`${name} stop clicking me!`);
-    }
+    // const handleClick2 = (name) => {
+    //     console.log(`${name} stop clicking me!`);
+    // }
 
     const handleClickCount = (name) => {
         if(count < 3) {
@@ -33,7 +33,15 @@ function Button() {
     const handleEventTarget = (e) => e.target.textContent = "Boink!";
 
     return (
-        <button onDoubleClick={(e) => handleEventTarget(e)}>Click Me!</button>
+        <>
+            <h2>Open your console in browser to see the magic</h2>
+            <div className='btn-group'>
+                <button onClick={handleClick}>Click Me!</button>
+                <button onClick={() => handleClickCount("Bro")}>Click Me!</button>
+                <button onClick={(e) => handleEventClick(e)}>Click Me!</button>
+                <button onDoubleClick={(e) => handleEventTarget(e)}>Double Click Me!</button>
+            </div>
+        </>
     );
 }
 

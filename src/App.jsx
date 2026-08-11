@@ -4,6 +4,10 @@ import Hello from './components/Hello';
 import WindowWidthAndHeight from './components/WindowWidthAndHeight';
 import Counter from './components/Counter';
 import DigitalClock from './components/DigitalClock';
+import Form from './components/Forms/FormGroup';
+import EmailForm from './components/Forms/EmailForm';
+import RegistrationForm from './components/Forms/RegistrationForm';
+import ExchancedForm from './components/Forms/EnhancedForm';
 import Navbar from './components/Navbar';
 import StudentProps from './components/StudentProps';
 import ReusableStudent from './components/ReusableStudent';
@@ -12,6 +16,7 @@ import UserGreeting from './components/UserGreeting';
 import List from './components/List';
 import Button from './components/Button';
 import ProfilePicture from './components/ProfilePicture';
+import NameState from './components/NameState';
 
 function App() {
 
@@ -40,9 +45,12 @@ function App() {
         <Route path="/" element={<Navigate to="/hello" replace />} />
         <Route path="/window" element={<WindowWidthAndHeight />} />
         <Route path="/hello" element={<Hello />} />
-        <Route path="/clock" element={<DigitalClock />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/forms" element={<FormGroup /> } /> 
+        <Route path="/useeffect/clock" element={<DigitalClock />} />
+        <Route path="/forms" element={<FormGroup />} />
+        <Route path="/usestate/counter" element={<Counter />} />
+        <Route path="/form/email" element={<EmailForm /> } />
+        <Route path="/form/registration" element={<RegistrationForm />} />
+        <Route path="/form/enchanced" element={<ExchancedForm />} /> 
         <Route path="/props" element={<StudentProps name="John Doe" age={20} isStudent={true} />} />
         <Route path="/reusable" element={<ReusableStudent />} />
         <Route path="/usergreeting" element={<UserGreeting username="John Doe" isLoggedIn={false} />} />
@@ -50,6 +58,7 @@ function App() {
         <Route path="/list/veggies" element={veggiesList.length > 0 && <List items={veggiesList} category="Veggies" /> } />
         <Route path="/button" element={<Button />} />
         <Route path="/button/profile" element={<ProfilePicture />} />
+        <Route path="/usestate/name" element={<NameState />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>
