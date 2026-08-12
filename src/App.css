@@ -238,7 +238,7 @@ hr {
   border: var(--primary-color) solid 2px;
 }
 
-.remove-food,
+.remove-item,
 .current-value {
   font-size: 2.1rem;
   color: lawngreen;
@@ -250,7 +250,7 @@ hr {
   }
 }
 
-.remove-food {
+.remove-item {
   cursor: pointer;
 }
 
@@ -339,7 +339,7 @@ hr {
 }
 
 .nav__submenu {
-  top: -3rem;
+  top: -4rem;
   width: 15rem;
   left: calc(100% + 0.5rem);
 }

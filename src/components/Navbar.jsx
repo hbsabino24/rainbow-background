@@ -23,12 +23,17 @@ const Navbar = () => {
               </ul>            
             </li>
             <li><Link to="/onchange/color">Color Picker</Link></li>
+            <li><Link to="/usestate/cars">Car List</Link></li>
           </ul>
         </li>
         <li className="nav__listitem"><a href="#">Basics of React</a>
           <ul className="nav__listitemdrop">
-            <li><Link to="/props">Student Props</Link></li>
-            <li><Link to="/reusable">Reusable Student</Link></li>
+            <li className="nav__sublistitem"><Link to="/props">Props</Link>
+              <ul className="nav__listitemdrop nav__submenu">
+                <li><Link to="/props/student">Student Props</Link></li>
+                <li><Link to="/props/reusable">Reusable Student</Link></li>
+              </ul>
+            </li>
             <li><Link to="/usergreeting">Condition Rendering</Link></li>
             <li className="nav__sublistitem"><Link to="/list/fruits">List</Link>
               <ul className="nav__listitemdrop nav__submenu">

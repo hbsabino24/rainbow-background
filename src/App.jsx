@@ -22,6 +22,7 @@ import ColorPicker from './components/ColorPicker';
 import StateUpdater from './components/StateUpdater';
 import Car from './components/Car';
 import ArrayState from './components/ArrayState';
+import CarList from './components/CarList';
 
 function App() {
 
@@ -56,8 +57,8 @@ function App() {
         <Route path="/form/email" element={<EmailForm /> } />
         <Route path="/form/registration" element={<RegistrationForm />} />
         <Route path="/form/enchanced" element={<ExchancedForm />} /> 
-        <Route path="/props" element={<StudentProps name="John Doe" age={20} isStudent={true} />} />
-        <Route path="/reusable" element={<ReusableStudent />} />
+        <Route path="/props/student" element={<StudentProps name="John Doe" age={20} isStudent={true} />} />
+        <Route path="/props/reusable" element={<ReusableStudent />} />
         <Route path="/usergreeting" element={<UserGreeting username="John Doe" isLoggedIn={false} />} />
         <Route path="/list/fruits" element={fruitsList.length > 0 && <List items={fruitsList} category="Fruits" />} />
         <Route path="/list/veggies" element={veggiesList.length > 0 && <List items={veggiesList} category="Veggies" /> } />
@@ -69,6 +70,7 @@ function App() {
         <Route path="/usestate/updater" element={<StateUpdater />} />
         <Route path="/usestate/car" element={<Car />} />
         <Route path="/usestate/array" element={<ArrayState />} />
+        <Route path="/usestate/cars" element={<CarList />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>

@@ -20,7 +20,7 @@ function ArrayState() {
             <ul>
                 {foods.map((food, index) => (
                     <li key={index} onClick={() => handleRemoveFood(index)}>
-                        <span className="remove-food">{food}</span>
+                        <span className="remove-item">{food}</span>
                     </li>
                 ))}
             </ul>
