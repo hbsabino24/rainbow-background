@@ -34,12 +34,14 @@ const Navbar = () => {
               <ul className="nav__listitemdrop nav__submenu">
                 <li><Link to="/list/fruits">Fruits</Link></li>
                 <li><Link to="/list/veggies">Vegetables</Link></li>
+                <li><Link to="/usestate/array">Food Array State</Link></li>
               </ul>
             </li>
             <li className="nav__sublistitem"><Link to="/button">Button</Link>
               <ul className="nav__listitemdrop nav__submenu">
                 <li><Link to="/button">Button onClick</Link></li>
                 <li><Link to="/button/profile">Profile Image</Link></li>
+                <li><Link to="/usestate/array">Add/Remove Food Array</Link></li>
               </ul>
             </li>
             <li className="nav__sublistitem"><Link to="/usestate">useState</Link>
@@ -48,6 +50,8 @@ const Navbar = () => {
                 <li><Link to="/usestate/name">Name State</Link></li>
                 <li><Link to="/onchange/color">Color Picker</Link></li>
                 <li><Link to="/usestate/updater">Updater</Link></li>
+                <li><Link to="/usestate/car">Object State</Link></li>
+                <li><Link to="/usestate/array">Array State</Link></li>
               </ul>
             </li>
             <li className="nav__sublistitem"><Link to="/onchange">onChange</Link>

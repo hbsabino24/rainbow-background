@@ -20,6 +20,8 @@ import NameState from './components/NameState';
 import ValueOnChange from './components/ValueOnChange';
 import ColorPicker from './components/ColorPicker';
 import StateUpdater from './components/StateUpdater';
+import Car from './components/Car';
+import ArrayState from './components/ArrayState';
 
 function App() {
 
@@ -65,6 +67,8 @@ function App() {
         <Route path="/onchange/value" element={<ValueOnChange />} />
         <Route path="/onchange/color" element={<ColorPicker />} />
         <Route path="/usestate/updater" element={<StateUpdater />} />
+        <Route path="/usestate/car" element={<Car />} />
+        <Route path="/usestate/array" element={<ArrayState />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>
