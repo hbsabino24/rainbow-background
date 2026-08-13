@@ -23,6 +23,7 @@ import StateUpdater from './components/StateUpdater';
 import Car from './components/Car';
 import ArrayState from './components/ArrayState';
 import CarList from './components/CarList';
+import ToDoList from './components/ToDoList';
 
 function App() {
 
@@ -71,6 +72,7 @@ function App() {
         <Route path="/usestate/car" element={<Car />} />
         <Route path="/usestate/array" element={<ArrayState />} />
         <Route path="/usestate/cars" element={<CarList />} />
+        <Route path="/onchange/todo" element={<ToDoList />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>

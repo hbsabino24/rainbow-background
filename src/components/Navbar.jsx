@@ -24,6 +24,7 @@ const Navbar = () => {
             </li>
             <li><Link to="/onchange/color">Color Picker</Link></li>
             <li><Link to="/usestate/cars">Car List</Link></li>
+            <li><Link to="/onchange/todo">To-Do List</Link></li>
           </ul>
         </li>
         <li className="nav__listitem"><a href="#">Basics of React</a>
