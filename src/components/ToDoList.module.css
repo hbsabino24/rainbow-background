@@ -1,8 +1,65 @@
 .to-do-list {
     text-align: center;
     margin-top: 100px;
+    
 }
 
 h1 {
-    font-size: 4rem;;
+    font-size: 4rem;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: green;
+    color: white;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+}
+
+.move-button {
+    background-color: blue;
+    color: white;
+}
+
+input[type="text"] {
+    font-size: 1.6rem;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+li {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-button, .move-button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 1.4rem;
 }
