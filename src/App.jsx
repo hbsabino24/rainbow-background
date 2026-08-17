@@ -24,6 +24,7 @@ import Car from './components/Car';
 import ArrayState from './components/ArrayState';
 import CarList from './components/CarList';
 import ToDoList from './components/ToDoList';
+import MultiComponents from './components/MultiComponents';
 
 function App() {
 
@@ -73,6 +74,7 @@ function App() {
         <Route path="/usestate/array" element={<ArrayState />} />
         <Route path="/usestate/cars" element={<CarList />} />
         <Route path="/onchange/todo" element={<ToDoList />} />
+        <Route path="/oncontext/multicomp" element={<MultiComponents />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>
