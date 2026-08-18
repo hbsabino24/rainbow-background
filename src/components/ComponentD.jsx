@@ -3,7 +3,7 @@ function ComponentD({ user }) {
     return (
         <div className="box">
             <h1>Component D</h1>
-            <h2>{`Bye ${user}`}</h2>
+            <h2>{`Bye`} <span className='current-value'>{`${user}`}</span>👈</h2>
         </div>
     );
 }

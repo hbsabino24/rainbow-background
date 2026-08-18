@@ -8,7 +8,7 @@ function ComponentA() {
     return (
         <div className="box">
             <h1>Component A</h1>
-            <h2>{`Hello ${user}`}</h2>
+            <h2>Hello <span className='current-value'>{`${user}`}</span>👇🏼</h2>
             <ComponentB user={user}/>
         </div>
     );

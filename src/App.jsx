@@ -25,6 +25,7 @@ import ArrayState from './components/ArrayState';
 import CarList from './components/CarList';
 import ToDoList from './components/ToDoList';
 import MultiComponents from './components/MultiComponents';
+import Remember from './components/Remember';
 
 function App() {
 
@@ -75,6 +76,7 @@ function App() {
         <Route path="/usestate/cars" element={<CarList />} />
         <Route path="/onchange/todo" element={<ToDoList />} />
         <Route path="/oncontext/multicomp" element={<MultiComponents />} />
+        <Route path="/onref/remember" element={<Remember />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
       </Routes>    
     </>

@@ -16,9 +16,11 @@ import React from 'react';
 // 1. import React, { useContext } from 'react';
 //    import { MyContext } from './ComponentA';
 // 2. const value = useContext(MyContext);
+
 function MultiComponents() {
     return (
         <>
+            <h2>Passing down props to a child component down the tree (nested components), prop drilling</h2>
             <ComponentA /> {/* Passing down props to a child component down the tree (nested components), prop drilling */}
         </>
     )

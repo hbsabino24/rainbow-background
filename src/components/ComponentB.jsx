@@ -5,6 +5,7 @@ function ComponentB({ user }) {
     return (
         <div className="box">
             <h1>Component B</h1>
+            <h2>👇🏼</h2>
             <ComponentC user={user}/>
         </div>
     );
