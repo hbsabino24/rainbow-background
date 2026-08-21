@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className='nav'>
-      <ul className="nav__list">
+      <div className="nav__toggle" onClick={() => setIsOpen(!isOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul className={`nav__list ${isOpen ? 'open' : ''}`}>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className='nav__listitem'> 
           <a href="#">React Components</a>
           <ul className='nav__listitemdrop'>
-            <li><a href="/hello">Hello</a></li>
+            <li><Link to="/hello">Hello</Link></li>
             <li><Link to="/useeffect/clock">Digital Clock</Link></li>
             <li><Link to="/usestate/counter">Counter</Link></li>
             <li><Link to="/window">Window Resize</Link></li>

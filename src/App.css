@@ -299,13 +299,14 @@ hr {
 }
 
 .nav__listitem:hover > .nav__listitemdrop,
-.nav__listitem:focus-within > .nav__listitemdrop,
+.nav__listitem:focus > .nav__listitemdrop,
 .nav__sublistitem:hover > .nav__submenu,
-.nav__sublistitem:focus-within > .nav__submenu {
+.nav__sublistitem:focus > .nav__submenu {
   opacity: 1;
   visibility: visible;
   z-index: 9999;
-  transition: all 0.4s ease-in-out;
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .nav__listitemdrop {
@@ -323,7 +324,8 @@ hr {
   /* z-index: 1; */
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transform: translateY(-20px);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .nav__listitemdrop li {
@@ -339,7 +341,7 @@ hr {
 }
 
 .nav__submenu {
-  top: -4rem;
+  top: 0;
   width: 15rem;
   left: calc(100% + 0.5rem);
 }
