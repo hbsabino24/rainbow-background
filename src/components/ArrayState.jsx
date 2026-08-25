@@ -10,7 +10,7 @@ function ArrayState() {
         setFoods(f => [...f, newFood]); // Add the new food to the array e.g. ['Apple', 'Banana', 'Orange', newFood]
     }
 
-    function handleRemoveFood(index) {
+    function handleRemoveFood(index) { // Remove the food from the array
         setFoods(foods.filter((_, i) => i !== index));
     }
 
