@@ -33,6 +33,7 @@ const Navbar = () => {
             <li><Link to="/usestate/cars">Car List</Link></li>
             <li><Link to="/onchange/todo">To-Do List</Link></li>
             <li><Link to="/codesnippet">Code Snippet</Link></li>
+            <li><Link to="/fadetext">Fade Text</Link></li>
           </ul>
         </li>
         <li className="nav__listitem"><a href="#">Basics of React</a>

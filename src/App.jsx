@@ -27,6 +27,8 @@ import ToDoList from './components/ToDoList';
 import MultiComponents from './components/MultiComponents';
 import Remember from './components/Remember';
 import CodeSnippet from './components/CodeSnippet';
+import FadeText from './components/FadeText';
+import FadeWords from './components/FadeWords';
 
 function App() {
 
@@ -80,6 +82,7 @@ function App() {
         <Route path="/onref/remember" element={<Remember />} />
         <Route path="/codesnippet" element={<CodeSnippet />} />
         <Route path="*" element={<Navigate to="/hello" replace />} />
+        <Route path="/fadetext" element={<FadeWords />} />
       </Routes>    
     </>
   );
