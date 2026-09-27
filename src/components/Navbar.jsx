@@ -84,6 +84,7 @@ const Navbar = () => {
             <li className="nav__sublistitem"><Link to="/onref">onRef</Link>
               <ul className="nav__listitemdrop nav__submenu">
                 <li><Link to="/onref/remember">Remember</Link></li>
+                <li><Link to="/onref/fadescroll">Fade Text by Scroll</Link></li>
               </ul>
             </li>
           </ul>

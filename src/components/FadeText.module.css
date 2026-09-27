@@ -16,6 +16,36 @@
   animation-delay: calc(var(--word-index) * 0.2s);
 }
 
+.fadeWordByScroll,
+.fadeWordReanimate {
+  /* Reset the styles to ensure it's clean */
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(10px); /* Keeps words sitting ready slightly offset downward */
+}
+
+.fadeWordReanimate {
+    /* Added a fast transition transition back so it resets cleanly when scrolling away */
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+/* This targets words only AFTER the parent element enters the viewport */
+.fadeTextContainer.is-visible .fadeWordByScroll {
+  animation: fadeInWordByScroll 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--word-index) * 0.15s); /* Reduced delay slightly for smoother text flow */
+}
+
+@keyframes fadeInWordByScroll {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeInWord {
   from {
     opacity: 0;
